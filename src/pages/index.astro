@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const title = "Eigenthoughts";
 const description =
   "Anler's personal website. A place where I can digest, exorcise, and purge distracting ideas and then try to move on.";
@@ -17,7 +19,10 @@ const description =
     <title>{title}</title>
   </head>
   <body>
-    <pre></pre>
+    <main>
+      <h1>{title}</h1>
+      <pre></pre>
+    </main>
     <script is:inline>
       const frames = ["<(^.^<)", "<(^.^)^", "^(^.^)>", "(>^.^)>"];
       let lastTime = 0;
