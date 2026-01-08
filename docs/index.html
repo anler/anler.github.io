@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💭</text></svg>"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.16.7"><meta name="description" content="{description}"><title>Eigenthoughts</title></head> <body> <pre></pre> <script>
+      const frames = ["<(^.^<)", "<(^.^)^", "^(^.^)>", "(>^.^)>"];
+      let lastTime = 0;
+      let currentFrame = 0;
+      const interval = 800;
+
+      function animate(currentTime) {
+        const deltaTime = currentTime - lastTime;
+        if (deltaTime >= interval) {
+          currentFrame = (currentFrame + 1) % frames.length;
+          document.querySelector("pre").textContent = frames[currentFrame];
+          lastTime = currentTime - (deltaTime % interval);
+        }
+        requestAnimationFrame(animate);
+      }
+
+      requestAnimationFrame(animate);
+    </script> </body> </html>
